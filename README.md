@@ -1,2 +1,2 @@
 # MyPowerShell
-Скрипты powershell удаляет временные файлы папки TEMP в Windows 10, 11
+Скрипт powershell удаляет временные файлы папки TEMP в Windows 10, 11
