@@ -1,3 +1,4 @@
+
 Write-Host "=== Windows Cleanup ==="      # выводит текст в консоль
 $startTime = Get-Date
 
@@ -19,6 +20,9 @@ $totalSizeMB = [math]::Round($totalSize / 1MB, 2)
 # у обекта есть свойство .Sum 
 
 $files | Remove-Item -Force -ErrorAction SilentlyContinue
+
+Get-ChildItem $tempPath -Directory -Recurse -Force -ErrorAction SilentlyContinue |
+Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
 
 #   -Recurse - удаляет вложенные папки и файлы
 #   -Force - удаляет скрытые файлы и папки
